@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const HomeSwitch = () => {
-  const [_, setIsRegistered] = useState(false);
+  const [_, setIsRegistered] = useState(false); //eslint-disable-line no-unused-vars
   const router = useRouter();
 
   useEffect(() => {
