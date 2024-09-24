@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const HomeSwitch = () => {
-  const [_isRegistered, setIsRegistered] = useState(false);
+  const [_, setIsRegistered] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
