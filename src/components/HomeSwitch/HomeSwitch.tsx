@@ -1,26 +1,26 @@
 "use client"; 
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef  } from "react";
 import { useRouter } from "next/navigation";
 
 const HomeSwitch = () => {
-  const [_, setIsRegistered] = useState(false); //eslint-disable-line no-unused-vars
+  const isRegisteredRef = useRef(false);
   const router = useRouter();
 
   useEffect(() => {
-    // Проверяем, есть ли данные пользователя в sessionStorage
+    //проверка данных в sessionStorage
     const userData = sessionStorage.getItem("user");
   
-    // Если данные есть, устанавливаем состояние и перенаправляем
+    //Если данные есть - перенаправляем в profile:
     if (userData) {
-      setIsRegistered(true);
+      isRegisteredRef.current = true;
       router.push("/profile");
     } else {
       router.push("/register");
     }
   }, [router]);
-  
-  return null; // Компонент ничего не рендерит сам по себе
+
+  return null; //компонент ничего не рендерит сам по себе
 };
 
 export default HomeSwitch;
