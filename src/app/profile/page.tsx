@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ProfilePage() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.containerStart}`}>
       <h1>Мой блокнот</h1>
       <Profile />
     </div>
