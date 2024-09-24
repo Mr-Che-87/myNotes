@@ -1,3 +1,44 @@
+/*
+"use client";
+import styles from "./Profile.module.scss";
+import NewNoteMenu from "./NewNoteMenu/NewNoteMenu";
+import NoteList from "./NoteList/NoteList";
+import { useEffect, useState } from "react";
+import { IUser, INote } from "@/types/interfaces";
+
+const Profile = () => {
+  const [user, setUser] = useState<IUser | null>(null);
+  const [notes, setNotes] = useState<INote[]>([]);
+
+  useEffect(() => {
+    const savedUser = sessionStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+
+    const savedNotes = sessionStorage.getItem("notes");
+    if (savedNotes) {
+      setNotes(JSON.parse(savedNotes));
+    }
+  }, []);
+
+  const handleNotesChange = (updatedNotes: INote[]) => {
+    setNotes(updatedNotes);
+    sessionStorage.setItem("notes", JSON.stringify(updatedNotes));
+  };
+
+  return (
+    <div className={styles.container}>
+      {user ? <NewNoteMenu user={user} /> : <p>Загрузка...</p>}
+      <NoteList notes={notes} onNotesChange={handleNotesChange} />
+    </div>
+  );
+};
+
+export default Profile;
+*/
+
+
 "use client";
 import styles from "./Profile.module.scss";
 import { useRouter } from "next/navigation";

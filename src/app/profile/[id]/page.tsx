@@ -1,6 +1,6 @@
 import styles from "@/styles/containerPage.module.scss";
 import type { Metadata } from "next";
-import EditNote from "@/components/Profile/EditNote/EditNote";
+import EditNote from "@/components/EditNote/EditNote";
 
 export const metadata: Metadata = {
   title: "Редактор заметки",

@@ -1,6 +1,6 @@
 import styles from "@/styles/containerPage.module.scss";
 import type { Metadata } from "next";
-import NewNote from "@/components/Profile/NewNote/NewNote";
+import NewNote from "@/components/NewNote/NewNote";
 
 
 export const metadata: Metadata = {
