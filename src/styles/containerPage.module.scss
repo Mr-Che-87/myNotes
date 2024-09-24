@@ -5,14 +5,14 @@
   max-width: 500px;
   min-height: 650px;
   color: #e0e0e0;
-  background:
-  //фон с верхней рамкой не повторяется
-    url('../assets/backgroundNote.png') no-repeat top center, 
-  //остоальной фон повторяется по вертикали стопицот тыщ раз по необходимости
-    url('../assets/backgroundNote.png') repeat-y 0 5000000px; 
-  background-size:
-    auto,       
-    auto;        
+  background: 
+ //фон с верхней рамкой не повторяется
+  url('../assets/backgroundNoteStart.png') no-repeat top center, 
+  //остальной фон повторяется по вертикали
+  url('../assets/backgroundNote.png') repeat-y;
+  background-size: 
+    auto, 
+    auto;
   margin: 50px auto 0;
   padding: 100px 10px 40px;
 }
